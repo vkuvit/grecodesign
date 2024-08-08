@@ -11,6 +11,7 @@ const Navbar = () => {
     <>
     <Logo/>
     <div className="bg-transparent fixed z-50 w-screen flex flex-col items-end">
+        <a href="#"></a>
       <FlipNav />
     </div>
     </>
