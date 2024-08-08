@@ -9,7 +9,7 @@ import { FiMenu, FiArrowRight } from "react-icons/fi";
 const Navbar = () => {
   return (
     <>
-    <div className="bg-transparent fixed z-50 w-screen flex flex-row justify-between">
+    <div className="bg-transparent fixed z-20 w-screen flex flex-row justify-between">
       <Logo/>
       <FlipNav />
     </div>
@@ -41,14 +41,14 @@ const NavLeft = ({ setIsOpen }) => {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="block lg:hidden text-gray-950 text-2xl"
+        className="block lg:hidden text-black text-2xl"
         onClick={() => setIsOpen((pv) => !pv)}
       >
         <FiMenu />
       </motion.button>
-      <NavLink text="Notre Carte" linksite="/carte" />
-      <NavLink text="Histoire" linksite="/histoire" />
-      <NavLink text="Franchise" linksite="/franchise" />
+      <NavLink text="Home" linksite="/" />
+      <NavLink text="Projet" linksite="/" />
+      <NavLink text="About" linksite="/" />
     </div>
   );
 };
@@ -61,8 +61,8 @@ const NavLink = ({ text, linksite }) => {
       className="hidden lg:block h-[30px] overflow-hidden font-medium"
     >
       <motion.div whileHover={{ y: -30 }}>
-        <span className="flex items-center h-[30px] text-black">{text}</span>
-        <span className="flex items-center h-[30px] text-amber-600">
+        <span className="flex items-center h-[30px] text-gray-400">{text}</span>
+        <span className="flex items-center h-[30px] text-black">
           {text}
         </span>
       </motion.div>
@@ -79,9 +79,9 @@ const NavMenu = ({ isOpen }) => {
       animate={isOpen ? "open" : "closed"}
       className="absolute py-3 bg-white shadow-lg left-0 right-0 top-full origin-top flex flex-col gap-3"
     >
-      <MenuLink text="Notre Carte" linksite="/carte" />
-      <MenuLink text="Histoire" linksite="/histoire" />
-      <MenuLink text="Franchise" linksite="/franchise" />
+      <MenuLink text="Home" linksite="/" />
+      <MenuLink text="Projet" linksite="/" />
+      <MenuLink text="About" linksite="/" />
     </motion.div>
   );
 };
@@ -92,7 +92,7 @@ const MenuLink = ({ text, linksite }) => {
       variants={menuLinkVariants}
       rel="nofollow"
       href={linksite}
-      className="h-[40px] hover:bg-amber-600 pl-4 py-1 w-screen text-black hover:text-white overflow-hidden font-medium text-xl flex items-start gap-2"
+      className="h-[40px] hover:bg-transparent pl-4 py-1 w-screen text-gray-400 hover:text-black overflow-hidden font-medium text-xl flex items-start gap-2"
     >
       <motion.div whileHover={{ y: -30 }}>
         <span className="flex items-center h-[30px]">{text}</span>

@@ -1,0 +1,47 @@
+.footerSection{
+    @apply flex flex-col justify-center items-center py-5 px-3 md:py-10;
+    overflow-x: hidden;
+    background-color: transparent;
+    border: black;
+    border-width: 2;
+    a{
+        @apply text-black py-1 px-3;
+        font-weight: 400; 
+        padding-bottom: 7px;
+        font-family: 'Essay';
+        transition: 0.3s all ease-in-out;
+    }
+    a:hover{
+        @apply rounded-3xl;
+        background-color: transparent;
+    }
+    .footerLegales{
+        @apply rounded-2xl py-2 mt-2 px-3 md:px-0 flex flex-col items-center md:flex-row text-xs md:text-sm;
+        background-color: transparent;
+        letter-spacing: 1px;
+        color: black;
+        text-transform: uppercase;
+        font: bold;
+    }
+
+    .footerLegales:hover {
+        background-color: transparent;
+        color: rgb(119, 1, 1);
+
+    }
+    
+    .footerUtiles{
+        @apply mt-5 text-black;
+        a{
+            @apply py-0 px-0;
+            font-family: inherit;
+        }
+        a:hover{
+            @apply rounded-3xl;
+            background-color: transparent; 
+        }
+        p{
+            @apply text-sm md:text-sm text-center; 
+        }
+    }
+}
