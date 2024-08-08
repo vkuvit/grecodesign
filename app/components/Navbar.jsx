@@ -9,9 +9,8 @@ import { FiMenu, FiArrowRight } from "react-icons/fi";
 const Navbar = () => {
   return (
     <>
-    <Logo/>
-    <div className="bg-transparent fixed z-50 w-screen flex flex-col items-end">
-        <a href="#"></a>
+    <div className="bg-transparent fixed z-50 w-screen flex flex-row justify-between">
+      <Logo/>
       <FlipNav />
     </div>
     </>
@@ -21,7 +20,7 @@ const Navbar = () => {
 const FlipNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-white max-w-7xl w-full sm:px-10 px-5 border-b-[1px] py-2 md:py-6 flex items-center justify-between relative">
+    <nav className="bg-white w-full sm:px-20 px-5 py-2 md:py-6 flex items-center justify-end relative">
       <NavLeft setIsOpen={setIsOpen} />
       <NavMenu isOpen={isOpen} />
     </nav>
@@ -30,8 +29,8 @@ const FlipNav = () => {
 
 const Logo = () => {
   return (
-    <Link href='/' className="fixed left-53px top-[69px] z-10 text-4xl font-black text-white">
-    <Image src="/assets/img/logo.png" alt="GrecoDesign" width={224} height={162} />
+  <Link href='/' className="w-full px-10 py-5">
+    <Image src="/assets/img/logo.png" alt="GrecoDesign" width={150} height={150} />
   </Link>
   );
 };

@@ -25,9 +25,9 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" sizes="any"/>
     </Head>
       <body className={inter.className}>
-        <Navbar/>
+        <Navbar />
         {children}</body>
-        <Footer/>
+        <Footer />
     </html>
   );
 }
